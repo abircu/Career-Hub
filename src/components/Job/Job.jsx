@@ -1,7 +1,9 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { AiFillDollarCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -42,9 +44,11 @@ const Job = ({ job }) => {
             </div>
           </div>
           <div className="card-actions">
-            <button className="btn btn-primary font-extrabold">
-              view details
-            </button>
+            <Link to={`/job/${id}`}>
+              <button className="btn btn-primary font-extrabold">
+                view details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
